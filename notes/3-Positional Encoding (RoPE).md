@@ -95,5 +95,6 @@ def apply_rope(x, cos, sin):
 *   **Why `dim=-1`?** This is a Python-style shortcut that means "The Last Dimension." In our data, the dimensions are `(Batch, Sequence, Embedding)`. By using `-1`, we ensure the gluing happens inside the **Embedding** list (the 768 numbers).
 
 ### 🔑 Key Technical Traits
-*   **No New Parameters:** Unlike the Embedding layer, RoPE doesn't have "weights" to learn. It is a pure mathematical function based on the word's index.
+*   **Trained vs. Fixed:** RoPE is **100% Fixed**. Unlike the Embedding layer or Attention weights, there are no "weights" to learn here. The model doesn't "learn" how to rotate; it just follows the rigid mathematical rules of geometry.
+*   **No New Parameters:** Because it is fixed, RoPE adds zero "weight" to the model's memory, making it very efficient.
 *   **Preserves Magnitude:** Rotating a vector doesn't change its length (energy), only its direction. This keeps the signals stable as they travel through the model.
