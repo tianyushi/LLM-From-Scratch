@@ -27,7 +27,7 @@ Each of these 384 pairs is treated like a point on a 2D graph (as seen in the di
 
 3.  **The Rotation:** We rotate all 384 points by an angle determined by the word's position. 
 
-![RoPE Rotation Diagram](assets/rope_rotation_diagram.png)
+![RoPE Rotation Diagram](pictures/rope_rotation_diagram.png)
 
 *As the position index increases (Pos 0 -> Pos 1 -> Pos 2), the vector "twists" further around the origin.*
 
